@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="fa">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="محمد ابراهیمی سیریزی، کارشناس ارشد برنامه‌ریزی شهری | خدمات GIS، نقشه‌برداری، کروکی و نقشه کاداستر ملک، پایش باغ پسته با تصاویر ماهواره‌ای و خدمات پژوهشی">
+<meta property="og:type" content="website">
+<meta property="og:title" content="محمد ابراهیمی سیریزی | GIS و برنامه‌ریزی شهری">
+<meta property="og:description" content="محمد ابراهیمی سیریزی، کارشناس ارشد برنامه‌ریزی شهری | خدمات GIS، نقشه‌برداری، کروکی و نقشه کاداستر ملک، پایش باغ پسته با تصاویر ماهواره‌ای و خدمات پژوهشی">
+<meta name="theme-color" content="#2c6e4f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2714%27%20fill%3D%27%232c6e4f%27/%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27%23ffffff%27%20stroke-width%3D%273%27%3E%3Cellipse%20cx%3D%2732%27%20cy%3D%2733%27%20rx%3D%2722%27%20ry%3D%2718%27/%3E%3Cellipse%20cx%3D%2732%27%20cy%3D%2733%27%20rx%3D%2713%27%20ry%3D%2710%27/%3E%3Ccircle%20cx%3D%2732%27%20cy%3D%2733%27%20r%3D%274%27/%3E%3C/g%3E%3C/svg%3E">
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>محمد ابراهیمی سیریزی</title>
+<script>
+/* ============================================================
+   ✏️  اطلاعات خود را فقط در همین قسمت وارد کنید
+   هر چیزی بین دو علامت " " است را عوض کنید و فایل را ذخیره کنید.
+   ============================================================ */
+window.SITE = {
+  phone:     "09332306468", // شماره تلفن
+  telegram:  "MGIS84",      // آیدی تلگرام بدون @
+  instagram: "",            // آیدی اینستاگرام بدون @ (تا وقتی خالی است نمایش داده نمی‌شود)
+  email:     "",            // ایمیل (اختیاری)
+  photo:     ""             // عکس ندارد؛ داخل دایره MES نمایش داده می‌شود
+};
+/* ============================ پایان ============================ */
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;900&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a cartographer's sheet. A dark topographic hero whose contours are drawn live from a terrain field, with the portrait as the summit
+   and real map marginalia (north arrow, scale bar, datum). Below: light single column — services, map-sheet portfolio, path, and a dark contact band that bookends the hero. */
+:root{
+  --paper:#f3f5f0; --sheet:#ffffff; --thumb:#e8eee6; --ink:#14241f; --muted:#56655f; --rule:#dbe2d8;
+  --orchard:#1f5a3d; --on-orchard:#ffffff; --pistachio:#93c572; --clay:#b4652d; --water:#2b7aa3;
+  --hero-bg:#0f1d19; --hero-ink:#eef3ee; --hero-muted:#a9b9b1; --hero-line:#93c572; --hero-index:#d88a52; --hero-glass:rgba(15,29,25,.78);
+  --disk-a:#1f5a3d; --disk-b:#6aa152; --disk-ink:#ffffff; --btn-ink:#0f1d19;
+  --ndvi-0:#8c5a2b; --ndvi-1:#d6b04a; --ndvi-2:#a6cf63; --ndvi-3:#2f7d3b;
+  --shadow:0 1px 2px rgba(20,36,31,.06),0 12px 32px rgba(20,36,31,.08);
+  --fa:"Vazirmatn",Tahoma,"Segoe UI",sans-serif;
+  --en:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --base:19px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0c1412; --sheet:#141e1b; --thumb:#1a2723; --ink:#e7eee9; --muted:#a3b3ac; --rule:#26332e;
+  --orchard:#9fd38a; --on-orchard:#0b1a12; --pistachio:#b4dd8f; --clay:#e19a62; --water:#6cb6dc;
+  --hero-bg:#070e0c; --hero-ink:#eef3ee; --hero-muted:#9fb1a8; --hero-line:#8fc46f; --hero-index:#e0965e; --hero-glass:rgba(7,14,12,.8);
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.35); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0c1412; --sheet:#141e1b; --thumb:#1a2723; --ink:#e7eee9; --muted:#a3b3ac; --rule:#26332e;
+  --orchard:#9fd38a; --on-orchard:#0b1a12; --pistachio:#b4dd8f; --clay:#e19a62; --water:#6cb6dc;
+  --hero-bg:#070e0c; --hero-ink:#eef3ee; --hero-muted:#9fb1a8; --hero-line:#8fc46f; --hero-index:#e0965e; --hero-glass:rgba(7,14,12,.8);
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.35); color-scheme:dark}
+
+html{font-size:var(--base);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink)}
+.site{font-family:var(--fa);line-height:1.85}
+.site[data-lang="en"]{font-family:var(--en);line-height:1.6}
+.site[data-lang="fa"] .en,.site[data-lang="en"] .fa{display:none!important}
+.wrap{max-width:70rem;margin-inline:auto;padding-inline:max(16px,3vw)}
+h1,h2,h3,h4{margin:0;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--clay);outline-offset:3px;border-radius:6px}
+svg.i{width:1.3rem;height:1.3rem;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.site[data-lang="fa"] h1,.site[data-lang="fa"] h2{font-weight:900}
+.site[data-lang="fa"] h3,.site[data-lang="fa"] h4{font-weight:700}
+.site[data-lang="en"] h1,.site[data-lang="en"] h2{font-weight:800;letter-spacing:-.02em}
+.site[data-lang="en"] h3,.site[data-lang="en"] h4{font-weight:600}
+
+/* ---------- nav ---------- */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--paper) 86%,transparent);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+.bar .wrap{display:flex;align-items:center;gap:1.2rem;padding-block:.55rem}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:700;min-width:0;color:var(--ink)}
+.brand b{min-width:2.1rem;height:2.1rem;padding-inline:.45rem;border-radius:.65rem;background:var(--orchard);color:var(--on-orchard);display:grid;place-items:center;font-family:var(--en);font-weight:800;font-size:.72rem;letter-spacing:.06em;direction:ltr;flex:none}
+.brand span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.links{display:flex;gap:1.5rem;margin-inline-start:auto;font-size:.86rem}
+.links a{text-decoration:none;color:var(--muted);font-weight:500}
+.links a:hover{color:var(--ink)}
+.tools{display:flex;gap:.35rem;margin-inline-start:auto}
+.links + .tools{margin-inline-start:0}
+.tbtn{font:inherit;font-size:.82rem;font-weight:700;min-height:2.5rem;min-width:2.6rem;padding:.3rem .7rem;border-radius:.75rem;border:1px solid var(--rule);background:var(--sheet);color:var(--ink);cursor:pointer}
+.tbtn:hover{border-color:var(--orchard);color:var(--orchard)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--hero-bg);color:var(--hero-ink);overflow:hidden;isolation:isolate}
+.terrain{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none}
+.site[dir="rtl"] .hero::before{background:linear-gradient(to left,var(--hero-bg) 8%,color-mix(in srgb,var(--hero-bg) 70%,transparent) 42%,transparent 72%)}
+.site[dir="ltr"] .hero::before{background:linear-gradient(to right,var(--hero-bg) 8%,color-mix(in srgb,var(--hero-bg) 70%,transparent) 42%,transparent 72%)}
+.hero-in,.facts{position:relative;z-index:2}
+.hero-in{display:grid;grid-template-columns:1.3fr .7fr;gap:2.5rem;align-items:center;padding-block:4.5rem 2.5rem}
+.hero-in > *{min-width:0}
+.eyebrow{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--hero-line);
+  border:1px solid color-mix(in srgb,var(--hero-line) 45%,transparent);border-radius:999px;padding:.3rem .8rem;background:var(--hero-glass)}
+.eyebrow i{width:.45rem;height:.45rem;border-radius:50%;background:var(--hero-line);display:block}
+.hero h1{font-size:clamp(2.3rem,6vw,4rem);line-height:1.15;margin-block:1rem .9rem}
+.hero h1 em{font-style:normal;color:var(--pistachio)}
+.tagline{color:var(--hero-muted);font-size:1.08rem;max-width:33rem}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.8rem}
+.cta a{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;text-decoration:none;padding:.75rem 1.35rem;border-radius:1rem;min-height:2.9rem}
+.cta .main{background:var(--pistachio);color:var(--btn-ink)}
+.cta .ghost{color:var(--hero-ink);border:1px solid color-mix(in srgb,var(--hero-ink) 35%,transparent);background:var(--hero-glass)}
+.cta a:hover{transform:translateY(-1px)}
+@media (prefers-reduced-motion:no-preference){.cta a,.work,.c-item,.chipbtn{transition:transform .2s,border-color .2s,background-color .2s}}
+
+.marker{position:relative;justify-self:center;width:min(15rem,62vw);aspect-ratio:1;max-width:100%}
+.ring{position:absolute;inset:0;border-radius:50%;border:2px solid var(--hero-index);padding:.6rem}
+.ring::before{content:"";position:absolute;inset:-1.1rem;border-radius:50%;border:1px dashed color-mix(in srgb,var(--hero-line) 70%,transparent)}
+.disk{position:relative;width:100%;height:100%;border-radius:50%;overflow:hidden;background:linear-gradient(160deg,var(--disk-a),var(--disk-b))}
+.disk img{width:100%;height:100%;object-fit:cover;display:block}
+.mono{position:absolute;inset:0;display:grid;place-items:center;color:var(--disk-ink);font-family:var(--en);font-size:2.8rem;font-weight:800;letter-spacing:.06em;direction:ltr}
+.spot{position:absolute;bottom:.2rem;inset-inline-end:-.6rem;direction:ltr;unicode-bidi:isolate;font-family:var(--mono);font-size:.7rem;color:var(--hero-ink);background:var(--hero-glass);
+  border:1px solid color-mix(in srgb,var(--hero-index) 60%,transparent);border-radius:.6rem;padding:.25rem .55rem;white-space:nowrap}
+.spot b{color:var(--hero-index);font-weight:500}
+
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;padding-block:0 3.6rem}
+.fact{border-top:1px solid color-mix(in srgb,var(--hero-line) 40%,transparent);padding-top:.8rem;min-width:0}
+.fact b{display:block;font-size:1.45rem;font-weight:900;color:var(--pistachio);line-height:1.3}
+.site[data-lang="en"] .fact b{font-weight:800}
+.fact span{color:var(--hero-muted);font-size:.85rem}
+
+.marg{position:absolute;inset:0;z-index:2;pointer-events:none;font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;color:var(--hero-muted);direction:ltr}
+.marg > *{position:absolute}
+.m-coord{top:.9rem;right:1rem}
+.m-datum{bottom:.9rem;right:1rem}
+.m-scale{bottom:.9rem;left:1rem;display:flex;align-items:center;gap:.5rem}
+.m-scale i{display:block;width:6rem;height:.35rem;border:1px solid var(--hero-ink);background:repeating-linear-gradient(90deg,var(--hero-ink) 0 25%,transparent 25% 50%)}
+.north{top:.8rem;left:1rem;width:1.1rem;height:2.2rem}
+.north path{fill:var(--hero-ink)}
+.north text{fill:var(--hero-ink);font-family:var(--mono);font-size:9px}
+
+/* ---------- sections ---------- */
+section.blk{padding-block:4.5rem}
+.head{display:flex;flex-direction:column;gap:.45rem;margin-bottom:2rem;max-width:40rem}
+.kicker{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;color:var(--clay);font-weight:500}
+.site[data-lang="fa"] .kicker{font-family:var(--fa);letter-spacing:0;font-size:.8rem;font-weight:700}
+.head h2{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.3}
+.head p{color:var(--muted)}
+
+/* services */
+.ndvi-card{display:grid;grid-template-columns:1fr 1.1fr;gap:2rem;align-items:center;background:var(--sheet);border:1px solid var(--rule);border-radius:1.5rem;padding:2rem;box-shadow:var(--shadow)}
+.ndvi-card > *{min-width:0}
+.badge{display:inline-block;font-size:.75rem;font-weight:700;color:var(--orchard);background:color-mix(in srgb,var(--orchard) 12%,transparent);padding:.2rem .7rem;border-radius:999px;margin-bottom:.7rem}
+.ndvi-card h3{font-size:1.35rem;margin-bottom:.6rem}
+.ndvi-card p{color:var(--muted)}
+.ndvi-card ul{margin:1rem 0 0;padding:0;list-style:none;display:grid;gap:.45rem}
+.ndvi-card li{display:flex;gap:.5rem;align-items:flex-start;font-size:.92rem}
+.ndvi-card li::before{content:"";width:.5rem;height:.5rem;border-radius:2px;background:var(--pistachio);margin-top:.6em;flex:none}
+.ndvi-fig{position:relative;background:var(--thumb);border-radius:1rem;padding:1rem}
+.ndvi-fig svg{display:block;width:100%;height:auto;direction:ltr}
+.ndvi-fig .schem{inset-inline-start:auto;left:.6rem;z-index:1}
+.features{display:grid;gap:1.2rem}
+.cad-card{grid-template-columns:1.1fr 1fr}
+.c-fill{fill:var(--orchard);opacity:.14}
+.c-side{fill:var(--ink);font-size:10px;text-anchor:middle}
+.c-area{fill:var(--ink);font-size:12px;font-weight:700;text-anchor:middle}
+.tbl{overflow-x:auto;margin-top:.7rem}
+.coords{width:100%;border-collapse:collapse;direction:ltr;font-family:var(--mono);font-size:.68rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+.coords th,.coords td{padding:.25rem .45rem;border-bottom:1px solid var(--rule);text-align:left}
+.coords th{color:var(--muted);font-weight:500}
+.site[data-lang="fa"] .coords th span.fa{font-family:var(--fa)}
+.n-px{stroke:var(--thumb);stroke-width:.8}
+.n-0{fill:var(--ndvi-0)}.n-1{fill:var(--ndvi-1)}.n-2{fill:var(--ndvi-2)}.n-3{fill:var(--ndvi-3)}
+.n-edge{fill:none;stroke:var(--ink);stroke-width:2;stroke-linejoin:round}
+.n-weak{fill:none;stroke:var(--ink);stroke-width:1.3;stroke-dasharray:4 4}
+.n-txt{fill:var(--ink);font-size:11px;text-anchor:middle}
+.n-mono{fill:var(--muted);font-family:var(--mono);font-size:9px;text-anchor:middle}
+.n-bar{fill:var(--ink)}
+.n-bar2{fill:var(--thumb);stroke:var(--ink);stroke-width:1}
+.legend{margin-top:.8rem;direction:ltr}
+.ramp{height:.6rem;border-radius:999px;background:linear-gradient(90deg,var(--ndvi-0),var(--ndvi-1) 35%,var(--ndvi-2) 65%,var(--ndvi-3))}
+.ticks{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.68rem;color:var(--muted);margin-top:.25rem}
+.lab{display:flex;justify-content:space-between;font-size:.76rem;color:var(--ink);margin-top:.1rem}
+.site[data-lang="fa"] .lab{font-family:var(--fa)}
+
+.svc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem 2.5rem;margin-top:2.5rem}
+.svc-grid > div{min-width:0}
+.svc-grid h3{font-size:.95rem;color:var(--muted);font-weight:500;padding-bottom:.6rem;border-bottom:2px solid var(--ink)}
+.svc-list{list-style:none;margin:0;padding:0}
+.svc{display:flex;gap:1rem;align-items:flex-start;padding-block:1rem;border-bottom:1px solid var(--rule)}
+.svc > div{min-width:0}
+.ic{width:2.6rem;height:2.6rem;border-radius:.8rem;background:color-mix(in srgb,var(--orchard) 12%,transparent);color:var(--orchard);display:grid;place-items:center;flex:none}
+.svc h4{font-size:1rem;line-height:1.5}
+.svc p{color:var(--muted);font-size:.88rem}
+
+/* portfolio */
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.chipbtn{font:inherit;font-size:.84rem;font-weight:500;min-height:2.4rem;padding:.35rem 1rem;border-radius:999px;border:1px solid var(--rule);background:var(--sheet);color:var(--ink);cursor:pointer}
+.chipbtn:hover{border-color:var(--ink)}
+.chipbtn[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.works{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.work{background:var(--sheet);border:1px solid var(--rule);border-radius:1.25rem;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.work:hover{border-color:color-mix(in srgb,var(--ink) 40%,transparent);transform:translateY(-2px)}
+.work.feat{grid-column:1/-1;flex-direction:row}
+.thumb{position:relative;background:var(--thumb);aspect-ratio:16/10;max-width:100%}
+.work.feat .thumb{flex:1.15;aspect-ratio:auto;min-height:17rem}
+.thumb svg{position:absolute;inset:0;width:100%;height:100%;display:block;direction:ltr}
+.schem{position:absolute;top:.6rem;inset-inline-start:.6rem;font-size:.66rem;color:var(--muted);background:var(--sheet);border:1px solid var(--rule);border-radius:999px;padding:.1rem .55rem}
+.w-body{padding:1.1rem 1.25rem 1.3rem;display:flex;flex-direction:column;gap:.45rem;flex:1;min-width:0}
+.work.feat .w-body{flex:1;padding:1.8rem;justify-content:center}
+.w-meta{display:flex;flex-wrap:wrap;gap:.3rem .7rem;font-size:.78rem;color:var(--muted)}
+.w-year{font-family:var(--mono);color:var(--clay);font-weight:500}
+.site[data-lang="fa"] .w-year{font-family:var(--fa);font-weight:700}
+.work h3{font-size:1.04rem;line-height:1.5}
+.work.feat h3{font-size:1.4rem}
+.work p{color:var(--muted);font-size:.9rem}
+.tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:auto;padding-top:.4rem}
+.tags span{font-size:.7rem;color:var(--ink);background:var(--thumb);border-radius:.4rem;padding:.12rem .5rem}
+.plink{align-self:flex-start;display:inline-flex;align-items:center;gap:.45rem;margin-top:.6rem;font-weight:700;font-size:.9rem;text-decoration:none;color:var(--on-orchard);background:var(--orchard);padding:.55rem 1.1rem;border-radius:.8rem}
+.plink.off{background:var(--thumb);color:var(--muted)}
+/* thumbnail drawing */
+.t-cont{fill:none;stroke:var(--muted);stroke-width:1;opacity:.28}
+.t-grid{stroke:var(--rule);stroke-width:1}
+.t-ink{fill:none;stroke:var(--ink);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.t-road{fill:none;stroke:var(--ink);stroke-width:8;stroke-linecap:round}
+.t-roadc{fill:none;stroke:var(--thumb);stroke-width:1.5;stroke-dasharray:8 7}
+.t-water{fill:none;stroke:var(--water);stroke-width:2.5;stroke-linecap:round}
+.t-pipe{fill:none;stroke:var(--water);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.t-dash{fill:none;stroke:var(--clay);stroke-width:2;stroke-dasharray:7 5}
+.t-pt{fill:var(--clay)}
+.t-tri{fill:var(--ink)}
+.t-lbl{fill:var(--muted);font-family:var(--mono);font-size:10px}
+.t-f1{fill:var(--clay);opacity:.42}.t-f2{fill:var(--pistachio);opacity:.55}.t-f3{fill:var(--orchard);opacity:.35}.t-f4{fill:var(--clay);opacity:.16}
+.t-wall{fill:var(--clay);opacity:.22}
+.t-open{fill:var(--thumb);stroke:var(--ink);stroke-width:1.5}
+.t-mark{fill:var(--clay);stroke:var(--thumb);stroke-width:2}
+.t-mtxt{fill:var(--thumb);font-family:var(--mono);font-size:10px;font-weight:500;text-anchor:middle;dominant-baseline:central}
+.t-stamp{fill:none;stroke:var(--clay);stroke-width:1.5}
+.t-stxt{fill:var(--clay);font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-anchor:middle}
+.t-tank{fill:var(--water);fill-opacity:.25;stroke:var(--water);stroke-width:2}
+.t-s0{fill:var(--clay);opacity:.45}.t-s1{fill:var(--clay);opacity:.18}.t-s2{fill:var(--pistachio);opacity:.6}.t-s3{fill:var(--orchard);opacity:.55}
+.t-star{fill:var(--ink);stroke:var(--thumb);stroke-width:2}
+
+/* path / cv */
+.tl{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.tl li{display:grid;grid-template-columns:9rem 1fr;gap:1.5rem;padding-block:1.2rem;border-bottom:1px solid var(--rule)}
+.tl li > *{min-width:0}
+.yr{font-family:var(--mono);font-size:.85rem;color:var(--clay);font-weight:500;padding-top:.2rem}
+.site[data-lang="fa"] .yr{font-family:var(--fa);font-weight:700}
+.tl h3{font-size:1.05rem}
+.tl p{color:var(--muted);font-size:.9rem}
+
+/* contact */
+.contact{background:var(--hero-bg);color:var(--hero-ink)}
+.contact .head p{color:var(--hero-muted)}
+.contact .kicker{color:var(--hero-index)}
+.c-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem}
+.c-item{display:flex;align-items:center;gap:.9rem;min-width:0;text-decoration:none;color:var(--hero-ink);border-radius:1.1rem;padding:1rem 1.2rem;
+  background:color-mix(in srgb,var(--hero-ink) 6%,transparent);border:1px solid color-mix(in srgb,var(--hero-ink) 14%,transparent)}
+a.c-item:hover{border-color:var(--pistachio);transform:translateY(-2px)}
+.c-item .ic{background:color-mix(in srgb,var(--pistachio) 16%,transparent);color:var(--pistachio)}
+.c-item .t{display:flex;flex-direction:column;min-width:0}
+.c-item .k{font-size:.78rem;color:var(--hero-muted)}
+.c-item .v{font-weight:700;direction:ltr;text-align:start;overflow-wrap:anywhere}
+.c-item.empty .v{color:var(--hero-index);font-weight:500;direction:inherit}
+footer{padding-block:2rem 2.5rem;color:var(--muted);font-size:.82rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem}
+
+@media (max-width:920px){
+  .links{display:none}
+  .works{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .work.feat{flex-direction:column}
+  .work.feat .thumb{flex:none;aspect-ratio:16/9;min-height:0}
+}
+@media (max-width:720px){
+  .hero-in{grid-template-columns:1fr;gap:2.2rem;padding-block:3rem 2rem}
+  .marker{order:-1;width:min(11rem,52vw)}
+  .site[dir] .hero::before{background:linear-gradient(to bottom,transparent 0%,color-mix(in srgb,var(--hero-bg) 75%,transparent) 38%,var(--hero-bg) 100%)}
+  .facts{gap:.6rem;padding-block:0 3.2rem}
+  .fact b{font-size:1.1rem}
+  .fact span{font-size:.74rem}
+  .m-datum,.north{display:none}
+  section.blk{padding-block:3.2rem}
+  .ndvi-card{grid-template-columns:1fr;padding:1.3rem}
+  .cad-card .ndvi-fig{order:2}
+  .svc-grid,.works,.c-grid{grid-template-columns:1fr}
+  .tl li{grid-template-columns:1fr;gap:.2rem}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5-10-5z"/><path d="m2 13 10 5 10-5"/><path d="m2 17.5 10 5 10-5" opacity=".5"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></symbol>
+  <symbol id="i-gps" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4z"/><path d="m13.5 6.5 4 4"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="m7 15 4-4 3 3 5-6"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5z"/><path d="M8 7h7M8 11h5"/></symbol>
+  <symbol id="i-plane" viewBox="0 0 24 24"><path d="M21 4 3 11l6 2 2 6 3-4 5 4 2-15z"/><path d="m9 13 8-6"/></symbol>
+  <symbol id="i-tg" viewBox="0 0 24 24"><path d="M21.5 4.5 2.8 11.6c-.8.3-.8 1.4 0 1.6l4.6 1.5 1.8 5.4c.2.6 1 .8 1.4.3l2.6-2.6 4.8 3.5c.6.4 1.4.1 1.6-.6L22.6 5.6c.2-.8-.5-1.4-1.1-1.1z"/><path d="m7.4 14.7 10.1-6.9-7.6 8"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h3l2 5-2.5 1.5a11 11 0 0 0 7 7L16 14l5 2v3a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></symbol>
+</svg>
+
+<div class="site" id="site" dir="rtl" data-lang="fa">
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#hero"><b>MES</b><span class="fa">محمد ابراهیمی سیریزی</span><span class="en">M. Ebrahimi Sirizi</span></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#services"><span class="fa">خدمات</span><span class="en">Services</span></a>
+      <a href="#work"><span class="fa">نمونه‌کارها</span><span class="en">Work</span></a>
+      <a href="#path"><span class="fa">سوابق</span><span class="en">Background</span></a>
+      <a href="#contact"><span class="fa">تماس</span><span class="en">Contact</span></a>
+    </nav>
+    <div class="tools">
+      <button class="tbtn" id="smaller" type="button" aria-label="Smaller text">A−</button>
+      <button class="tbtn" id="bigger" type="button" aria-label="Bigger text">A+</button>
+      <button class="tbtn" id="lang" type="button"><span class="fa">EN</span><span class="en">فا</span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="hero">
+  <canvas class="terrain" id="terrain" aria-hidden="true"></canvas>
+  <div class="marg" aria-hidden="true">
+    <span class="m-coord">30°17′N · 57°05′E</span>
+    <svg class="north" viewBox="0 0 20 40"><path d="M10 2 17 22 10 18 3 22z"/><text x="10" y="36" text-anchor="middle">N</text></svg>
+    <span class="m-scale"><i></i>0 · 250 · 500 m</span>
+    <span class="m-datum">WGS 84 · UTM 40N · 1:25 000</span>
+  </div>
+  <div class="hero-in wrap">
+    <div>
+      <span class="eyebrow"><i></i><span class="fa">GIS · نقشه‌برداری · برنامه‌ریزی شهری</span><span class="en">GIS · SURVEYING · URBAN PLANNING</span></span>
+      <h1><span class="fa">محمد ابراهیمی <em>سیریزی</em></span><span class="en">Mohammad Ebrahimi <em>Sirizi</em></span></h1>
+      <p class="tagline">
+        <span class="fa">کارشناس ارشد برنامه‌ریزی شهری. با نقشه و داده مکانی کمک می‌کنم تصمیم بهتری بگیرید؛ از سلامت باغ پسته تا برنامه‌ریزی کاربری زمین.</span>
+        <span class="en">Urban planner (M.Sc.). I use maps and spatial data to help you decide better, from pistachio orchard health to land-use planning.</span>
+      </p>
+      <div class="cta">
+        <a class="main" id="heroCta" href="#contact"><span class="fa">تماس با من</span><span class="en">Get in touch</span><svg class="i" style="transform:scaleX(var(--flip,-1))"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+    <div class="marker" id="marker">
+      <div class="ring"><div class="disk"><div class="mono" id="mono">MES</div><img id="photo" alt="Mohammad Ebrahimi Sirizi" hidden></div></div>
+      <span class="spot"><b>▲</b> 1755 m</span>
+    </div>
+  </div>
+  <div class="facts wrap">
+    <div class="fact"><b><span class="fa">از ۱۳۹۶</span><span class="en">Since 2017</span></b><span><span class="fa">تجربه کار میدانی</span><span class="en">Field experience</span></span></div>
+    <div class="fact"><b><span class="fa">۲ زبان</span><span class="en">2 languages</span></b><span><span class="fa">فارسی و انگلیسی</span><span class="en">Persian and English</span></span></div>
+    <div class="fact"><b><span class="fa">ارشد</span><span class="en">M.Sc.</span></b><span><span class="fa">برنامه‌ریزی شهری</span><span class="en">Urban planning</span></span></div>
+  </div>
+</section>
+
+<section class="blk" id="services">
+  <div class="wrap">
+    <div class="head">
+      <span class="kicker"><span class="fa">خدمات</span><span class="en">SERVICES</span></span>
+      <h2><span class="fa">از برداشت میدانی تا تحلیل و گزارش</span><span class="en">From field survey to analysis and report</span></h2>
+    </div>
+
+    <div class="features">
+    <div class="ndvi-card">
+      <div>
+        <span class="badge"><span class="fa">ویژه باغداران پسته</span><span class="en">For pistachio growers</span></span>
+        <h3><span class="fa">گزارش سلامت باغ با تصاویر ماهواره‌ای</span><span class="en">Orchard health reports from satellite imagery</span></h3>
+        <p><span class="fa">با تصاویر رایگان ماهواره Sentinel-2 و شاخص NDVI، باغ شما را قطعه‌به‌قطعه بررسی می‌کنم.</span><span class="en">Using free Sentinel-2 imagery and the NDVI index, I check your orchard block by block.</span></p>
+        <ul>
+          <li><span class="fa">کدام قسمت‌های باغ ضعیف شده‌اند</span><span class="en">Which parts of the orchard are weakening</span></li>
+          <li><span class="fa">تغییر وضعیت باغ در طول فصل</span><span class="en">How the orchard changes through the season</span></li>
+          <li><span class="fa">نقشه و گزارش ساده و قابل‌فهم</span><span class="en">A clear map and a plain report</span></li>
+        </ul>
+      </div>
+      <div class="ndvi-fig">
+        <span class="schem"><span class="fa">تصویر نمادین</span><span class="en">Schematic</span></span>
+        <svg id="ndviSvg" viewBox="0 0 360 240" role="img" aria-label="NDVI map"></svg>
+        <div class="legend" aria-hidden="true">
+          <div class="ramp"></div>
+          <div class="ticks"><span>0.0</span><span>0.2</span><span>0.4</span><span>0.6</span><span>0.8</span></div>
+          <div class="lab"><span><span class="fa">خاک</span><span class="en">Soil</span></span><span><span class="fa">ضعیف</span><span class="en">Weak</span></span><span><span class="fa">متوسط</span><span class="en">Fair</span></span><span><span class="fa">سالم</span><span class="en">Healthy</span></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ndvi-card cad-card">
+      <div class="ndvi-fig">
+        <span class="schem"><span class="fa">تصویر نمادین</span><span class="en">Schematic</span></span>
+        <svg viewBox="0 0 360 240" role="img" aria-label="Cadastral map">
+          <path class="t-grid" d="M40 0V240M80 0V240M120 0V240M160 0V240M200 0V240M240 0V240M280 0V240M320 0V240M0 40H360M0 80H360M0 120H360M0 160H360M0 200H360"/>
+          <path class="c-fill" d="M92 72 L268 54 L290 178 L80 194 Z"/>
+          <path class="n-edge" d="M92 72 L268 54 L290 178 L80 194 Z"/>
+          <circle class="t-pt" cx="92" cy="72" r="4.5"/><circle class="t-pt" cx="268" cy="54" r="4.5"/><circle class="t-pt" cx="290" cy="178" r="4.5"/><circle class="t-pt" cx="80" cy="194" r="4.5"/>
+          <text class="t-lbl" x="80" y="64" text-anchor="middle">P1</text><text class="t-lbl" x="280" y="46" text-anchor="middle">P2</text><text class="t-lbl" x="303" y="192" text-anchor="middle">P3</text><text class="t-lbl" x="66" y="208" text-anchor="middle">P4</text>
+          <text class="c-side fa" x="180" y="50">کوچه ۸ متری</text><text class="c-side en" x="180" y="50">8 m alley</text>
+          <text class="c-side fa" x="324" y="120">ملک مجاور</text><text class="c-side en" x="324" y="120">Neighbour</text>
+          <text class="c-side fa" x="185" y="214">باغ مجاور</text><text class="c-side en" x="185" y="214">Orchard</text>
+          <text class="c-side fa" x="46" y="137">جاده</text><text class="c-side en" x="46" y="137">Road</text>
+          <text class="c-area fa" x="182" y="128">مساحت: ۱٬۴۸۹ مترمربع</text><text class="c-area en" x="182" y="128">Area: 1,489 m²</text>
+          <path class="t-tri" d="M338 8 L344 24 L338 20 L332 24 Z"/><text class="n-mono" x="338" y="34">N</text>
+          <rect class="n-bar" x="20" y="226" width="20" height="5"/><rect class="n-bar2" x="40" y="226" width="20" height="5"/><text class="n-mono" x="20" y="222">0</text><text class="n-mono" x="60" y="222">10 m</text>
+          <text class="n-mono" x="120" y="238">E 507 230</text><text class="n-mono" x="280" y="238">E 507 270</text>
+        </svg>
+        <div class="tbl"><table class="coords">
+          <thead><tr><th><span class="fa">نقطه</span><span class="en">Point</span></th><th>E (X)</th><th>N (Y)</th></tr></thead>
+          <tbody><tr><td>P1</td><td>507 223.00</td><td>3 350 542.00</td></tr><tr><td>P2</td><td>507 267.00</td><td>3 350 546.50</td></tr><tr><td>P3</td><td>507 272.50</td><td>3 350 515.50</td></tr><tr><td>P4</td><td>507 220.00</td><td>3 350 511.50</td></tr></tbody>
+        </table></div>
+      </div>
+      <div>
+        <span class="badge"><span class="fa">برای هر کاربردی</span><span class="en">For any purpose</span></span>
+        <h3><span class="fa">کروکی و نقشه کاداستر ملک</span><span class="en">Property sketches and cadastral maps</span></h3>
+        <p><span class="fa">مرز ملک را با GPS برداشت می‌کنم و کروکی یا نقشه کاداستر ملک را با مختصات UTM و مساحت تحویل می‌دهم.</span><span class="en">I survey the property boundary with GPS and deliver a sketch or cadastral map with UTM coordinates and the area.</span></p>
+        <ul>
+          <li><span class="fa">زمین، باغ، خانه و ملک کشاورزی</span><span class="en">Land, orchards, houses and farmland</span></li>
+          <li><span class="fa">برای شهرداری، ادارات، خرید و فروش و تقسیم ملک</span><span class="en">For municipalities, government offices, sales and dividing property</span></li>
+          <li><span class="fa">مختصات گوشه‌ها، حدود اربعه و مساحت</span><span class="en">Corner coordinates, boundaries and area</span></li>
+          <li><span class="fa">نقشه رسمی با مهر نقشه‌بردار دارای پروانه</span><span class="en">Official maps stamped by a licensed surveyor</span></li>
+        </ul>
+      </div>
+    </div>
+    </div>
+
+    <div class="svc-grid">
+      <div>
+        <h3><span class="fa">نقشه و GIS</span><span class="en">Maps and GIS</span></h3>
+        <ul class="svc-list">
+          <li class="svc"><span class="ic"><svg class="i"><use href="#i-layers"/></svg></span><div><h4><span class="fa">مکان‌یابی و تحلیل چندمعیاره</span><span class="en">Site selection and multi-criteria analysis</span></h4><p><span class="fa">بهترین مکان برای کاربری، تأسیسات یا سرمایه‌گذاری</span><span class="en">The best location for a land use, facility or investment</span></p></div></li>
+          <li class="svc"><span class="ic"><svg class="i"><use href="#i-map"/></svg></span><div><h4><span class="fa">نقشه کاربری اراضی و حریم</span><span class="en">Land-use and boundary maps</span></h4><p><span class="fa">نقشه‌های آماده چاپ و ارائه برای طرح‌ها و اداره‌ها</span><span class="en">Print-ready maps for plans and government offices</span></p></div></li>
+          <li class="svc"><span class="ic"><svg class="i"><use href="#i-gps"/></svg></span><div><h4><span class="fa">نقشه ازبیلت و برداشت مسیر</span><span class="en">As-built maps and route surveys</span></h4><p><span class="fa">برداشت مسیر خطوط انتقال آب و تهیه نقشه ازبیلت</span><span class="en">Surveying water line routes and drawing as-built maps</span></p></div></li>
+          <li class="svc"><span class="ic"><svg class="i"><use href="#i-cap"/></svg></span><div><h4><span class="fa">بخش GIS پایان‌نامه و پروژه</span><span class="en">GIS for theses and projects</span></h4><p><span class="fa">تهیه نقشه، تحلیل مکانی و آموزش</span><span class="en">Maps, spatial analysis and training</span></p></div></li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="fa">پژوهش و نگارش</span><span class="en">Research and writing</span></h3>
+        <ul class="svc-list">
+          <li class="svc"><span class="ic"><svg class="i"><use href="#i-pen"/></svg></span><div><h4><span class="fa">اصلاح و ویرایش مقاله</span><span class="en">Manuscript revision and editing</span></h4><p><span class="fa">بازنویسی بخش‌ها و رفع ایرادهای علمی و نگارشی</span><span class="en">Rewriting sections and fixing content and language issues</span></p></div></li>
+          <li class="svc"><span class="ic"><svg class="i"><use href="#i-doc"/></svg></span><div><h4><span class="fa">نامه پاسخ به داوران</span><span class="en">Response letters to reviewers</span></h4><p><span class="fa">پاسخ نکته‌به‌نکته به نظر داوران مجله</span><span class="en">Point-by-point replies to reviewer comments</span></p></div></li>
+          <li class="svc"><span class="ic"><svg class="i"><use href="#i-chart"/></svg></span><div><h4><span class="fa">تحلیل آماری با SmartPLS</span><span class="en">SmartPLS analysis</span></h4><p><span class="fa">مدل‌سازی معادلات ساختاری و نوشتن نتایج</span><span class="en">Structural equation models and results write-up</span></p></div></li>
+          <li class="svc"><span class="ic"><svg class="i"><use href="#i-book"/></svg></span><div><h4><span class="fa">جستجو و درج منابع</span><span class="en">References and citations</span></h4><p><span class="fa">منابع معتبر، مرتب‌شده طبق شیوه‌نامه مجله</span><span class="en">Reliable sources, formatted to the journal's style</span></p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blk" id="work">
+  <div class="wrap">
+    <div class="head">
+      <span class="kicker"><span class="fa">نمونه‌کارها</span><span class="en">SELECTED WORK</span></span>
+      <h2><span class="fa">پروژه‌هایی که انجام داده‌ام</span><span class="en">Projects I have worked on</span></h2>
+    </div>
+    <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+    <div class="works" id="works"></div>
+  </div>
+</section>
+
+<section class="blk" id="path">
+  <div class="wrap">
+    <div class="head">
+      <span class="kicker"><span class="fa">تحصیلات و سوابق</span><span class="en">EDUCATION AND EXPERIENCE</span></span>
+      <h2><span class="fa">مسیر تا امروز</span><span class="en">The path so far</span></h2>
+    </div>
+    <ul class="tl">
+      <li><span class="yr"><span class="fa">اکنون</span><span class="en">Now</span></span><div><h3><span class="fa">خدمات GIS و پژوهشی به‌صورت آزاد</span><span class="en">Freelance GIS and research services</span></h3><p><span class="fa">همکاری با باغداران، دانشجویان و پژوهشگران</span><span class="en">Working with growers, students and researchers</span></p></div></li>
+      <li><span class="yr"><span class="fa">۱۳۹۶ – ۱۴۰۰</span><span class="en">2017 – 2021</span></span><div><h3><span class="fa">کارشناسی ارشد برنامه‌ریزی شهری</span><span class="en">M.Sc. Urban Planning</span></h3><p><span class="fa">دانشگاه آزاد اسلامی کرمان · پایان‌نامه: برنامه‌ریزی کاربری اراضی با GIS</span><span class="en">Islamic Azad University, Kerman · Thesis: GIS land-use planning</span></p></div></li>
+      <li><span class="yr"><span class="fa">۱۳۹۱ – ۱۳۹۵</span><span class="en">2012 – 2016</span></span><div><h3><span class="fa">کارشناسی جغرافیا و برنامه‌ریزی شهری</span><span class="en">B.Sc. Geography and Urban Planning</span></h3><p><span class="fa">دانشگاه شهید باهنر کرمان</span><span class="en">Shahid Bahonar University of Kerman</span></p></div></li>
+      <li><span class="yr"><span class="fa">تدریس</span><span class="en">Teaching</span></span><div><h3><span class="fa">مدرس زبان انگلیسی</span><span class="en">English teacher</span></h3><p><span class="fa">آموزشگاه زبان ققنوس</span><span class="en">Qoqnoos language institute</span></p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="blk contact" id="contact">
+  <div class="wrap">
+    <div class="head">
+      <span class="kicker"><span class="fa">تماس</span><span class="en">CONTACT</span></span>
+      <h2><span class="fa">برای همکاری پیام بدهید</span><span class="en">Let's work together</span></h2>
+      <p><span class="fa">از هر راهی که برایتان راحت‌تر است در تماس باشید.</span><span class="en">Reach me whichever way suits you.</span></p>
+    </div>
+    <div class="c-grid" id="contacts"></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span><span class="fa">© ۱۴۰۵ محمد ابراهیمی سیریزی</span><span class="en">© 2026 Mohammad Ebrahimi Sirizi</span></span></div></footer>
+</div>
+
+<script>
+(function(){
+  var S=window.SITE||{}, site=document.getElementById('site');
+  function store(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+  function load(k){try{return localStorage.getItem(k)}catch(e){return null}}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function bi(o){return '<span class="fa">'+o.fa+'</span><span class="en">'+o.en+'</span>'}
+  var relayout=function(){};
+
+  /* language */
+  function setLang(l){site.dataset.lang=l;site.dir=(l==='fa')?'rtl':'ltr';document.documentElement.lang=l;
+    site.style.setProperty('--flip',l==='fa'?'-1':'1');store('lang',l);relayout()}
+  setLang(load('lang')==='en'?'en':'fa');
+  document.getElementById('lang').addEventListener('click',function(){setLang(site.dataset.lang==='fa'?'en':'fa')});
+
+  /* text size */
+  var size=parseInt(load('size'),10); if(!(size>=15&&size<=30)) size=19;
+  function setSize(s){size=Math.max(15,Math.min(30,s));document.documentElement.style.setProperty('--base',size+'px');store('size',String(size));relayout()}
+  setSize(size);
+  document.getElementById('bigger').addEventListener('click',function(){setSize(size+2)});
+  document.getElementById('smaller').addEventListener('click',function(){setSize(size-2)});
+
+  /* photo */
+  var img=document.getElementById('photo');
+  if(S.photo){img.onload=function(){img.hidden=false;document.getElementById('mono').hidden=true};img.src=S.photo}
+
+  /* contact */
+  var clean=function(v){return (v||'').trim().replace(/^@/,'')};
+  var tg=clean(S.telegram);
+  if(tg){var hc=document.getElementById('heroCta');hc.href='https://t.me/'+encodeURIComponent(tg);hc.target='_blank';hc.rel='noopener';
+    hc.querySelector('.fa').textContent='پیام در تلگرام';hc.querySelector('.en').textContent='Message on Telegram'}
+  var items=[
+    {icon:'i-tg',k:{fa:'تلگرام',en:'Telegram'},val:tg,show:function(v){return '@'+v},href:function(v){return 'https://t.me/'+encodeURIComponent(v)}},
+    {icon:'i-ig',k:{fa:'اینستاگرام',en:'Instagram'},val:clean(S.instagram),show:function(v){return '@'+v},href:function(v){return 'https://instagram.com/'+encodeURIComponent(v)}},
+    {icon:'i-phone',k:{fa:'تلفن',en:'Phone'},val:(S.phone||'').trim(),show:function(v){var d=v.replace(/\D/g,'');return /^09\d{9}$/.test(d)?d.replace(/^(\d{4})(\d{3})(\d{4})$/,'$1 $2 $3'):v},href:function(v){return 'tel:'+v.replace(/[^\d+]/g,'')}},
+    {icon:'i-mail',k:{fa:'ایمیل',en:'Email'},val:(S.email||'').trim(),show:function(v){return v},href:function(v){return 'mailto:'+v}}
+  ];
+  var ch='';
+  items.forEach(function(it){
+    if(!it.val) return;
+    var ic='<span class="ic"><svg class="i"><use href="#'+it.icon+'"/></svg></span>', k='<span class="k">'+bi(it.k)+'</span>', h=it.href(it.val), ext=/^https?:/.test(h);
+    ch+='<a class="c-item"'+(ext?' target="_blank" rel="noopener"':'')+' href="'+esc(h)+'">'+ic+'<span class="t">'+k+'<span class="v">'+esc(it.show(it.val))+'</span></span></a>';
+  });
+  document.getElementById('contacts').innerHTML=ch;
+
+  /* ---------- schematic thumbnails ---------- */
+  var CONT='<path class="t-cont" d="M-10 38 C70 18 150 58 330 28"/><path class="t-cont" d="M-10 78 C80 58 170 98 330 68"/><path class="t-cont" d="M-10 150 C90 128 190 172 330 140"/><path class="t-cont" d="M-10 188 C90 170 200 205 330 180"/>';
+  function tri(x,y){return '<path class="t-tri" d="M'+x+' '+(y-9)+' L'+(x+8)+' '+(y+5)+' L'+(x-8)+' '+(y+5)+' Z"/>'}
+  function star(cx,cy,r){var p='';for(var i=0;i<10;i++){var a=Math.PI/5*i-Math.PI/2,rr=i%2?r*.45:r;p+=(i?'L':'M')+(cx+rr*Math.cos(a)).toFixed(1)+' '+(cy+rr*Math.sin(a)).toFixed(1)}return '<path class="t-star" d="'+p+'Z"/>'}
+  var TH={
+    landuse:function(){return CONT+'<path class="t-f1" d="M60 52 L130 40 L150 96 L84 110 Z"/><path class="t-f2" d="M130 40 L232 34 L250 100 L150 96 Z"/><path class="t-f3" d="M84 110 L150 96 L168 162 L70 166 Z"/><path class="t-f4" d="M150 96 L250 100 L262 166 L168 162 Z"/><path class="t-ink" d="M30 122 C110 104 200 122 300 108"/><path class="t-ink" d="M146 22 L172 182"/><path class="t-dash" d="M44 44 L242 26 L284 108 L270 178 L52 180 Z"/>'},
+    cross:function(){var s=CONT+'<path class="t-water" d="M64 -5 C74 40 52 80 66 120 S70 170 60 205"/><path class="t-water" d="M154 -5 C166 50 140 90 152 124 S160 170 150 205"/><path class="t-water" d="M248 -5 C236 50 258 86 246 114 S240 170 252 205"/><path class="t-road" d="M-10 124 C80 104 200 140 330 104"/><path class="t-roadc" d="M-10 124 C80 104 200 140 330 104"/>';
+      [[65,117],[152,120],[246,119]].forEach(function(p,i){s+='<circle class="t-mark" cx="'+p[0]+'" cy="'+p[1]+'" r="10"/><text class="t-mtxt" x="'+p[0]+'" y="'+p[1]+'">'+(i+1)+'</text>'});return s},
+    asbuilt:function(){var s=CONT+'<path class="t-pipe" d="M24 162 L92 122 L160 132 L228 84 L298 64"/>';
+      [[92,122,11,-10],[160,132,8,22],[228,84,11,-10]].forEach(function(p,i){s+=tri(p[0],p[1])+'<text class="t-lbl" x="'+(p[0]+p[2])+'" y="'+(p[1]+p[3])+'">P'+(i+1)+'</text>'});
+      return s+'<rect class="t-stamp" x="20" y="18" width="80" height="22" rx="3"/><text class="t-stxt" x="60" y="33">AS-BUILT</text>'},
+    pipe:function(){var s='<path class="t-ink" d="M0 78 C60 66 120 92 180 82 S280 66 320 74"/>';
+      [40,100,160,220].forEach(function(x){s+='<path class="t-dash" d="M'+x+' 84 L'+x+' 112"/>'});
+      return s+'<path class="t-pipe" d="M0 122 C60 110 120 136 180 126 S280 110 320 118"/><path class="t-tri" d="M170 117 L180 126 L170 135 Z M190 117 L180 126 L190 135 Z"/><rect class="t-tank" x="266" y="26" width="42" height="30" rx="3"/><path class="t-water" d="M287 56 L287 112"/><text class="t-lbl" x="20" y="64">GL</text><text class="t-lbl" x="20" y="150">PIPE</text>'},
+    parcel:function(){var s='';for(var x=20;x<320;x+=20)s+='<path class="t-grid" d="M'+x+' 0 L'+x+' 200"/>';for(var y=20;y<200;y+=20)s+='<path class="t-grid" d="M0 '+y+' L320 '+y+'"/>';
+      var P=[[70,150],[96,52],[210,40],[256,120],[200,164]],d='M'+P.map(function(p){return p.join(' ')}).join(' L')+' Z';
+      s+='<path class="t-f3" d="'+d+'"/><path class="t-ink" d="'+d+'"/>';
+      P.forEach(function(p,i){s+='<circle class="t-pt" cx="'+p[0]+'" cy="'+p[1]+'" r="5"/><text class="t-lbl" x="'+(p[0]+8)+'" y="'+(p[1]-8)+'">P'+(i+1)+'</text>'});
+      return s+'<path class="t-tri" d="M292 14 L299 34 L292 29 L285 34 Z"/><text class="t-lbl" x="292" y="48" text-anchor="middle">N</text>'},
+    arch:function(){var s='<path class="t-ink" d="M14 172 L306 172"/><rect class="t-wall" x="58" y="82" width="204" height="90"/><rect class="t-ink" x="58" y="82" width="204" height="90"/><path class="t-wall" d="M112 82 A48 36 0 0 1 208 82 Z"/><path class="t-ink" d="M112 82 A48 36 0 0 1 208 82"/><rect class="t-wall" x="226" y="34" width="26" height="48"/><rect class="t-ink" x="226" y="34" width="26" height="48"/><path class="t-ink" d="M234 42 L234 70 M244 42 L244 70"/>';
+      [84,140,196].forEach(function(x){s+='<path class="t-open" d="M'+x+' 172 L'+x+' 130 A20 20 0 0 1 '+(x+40)+' 130 L'+(x+40)+' 172"/>'});return s},
+    suit:function(){var s='',best=-9,bx=0,by=0;
+      for(var j=0;j<10;j++)for(var i=0;i<16;i++){var v=.5+.32*Math.sin(i*.55+1)*Math.cos(j*.6-.4)+.16*Math.sin((i+j)*.9);
+        var c=v<.35?'t-s0':v<.5?'t-s1':v<.66?'t-s2':'t-s3';if(i>2&&i<13&&j>1&&j<8&&v>best){best=v;bx=i;by=j}
+        s+='<rect class="'+c+'" x="'+(i*20+1)+'" y="'+(j*20+1)+'" width="18" height="18" rx="2"/>'}
+      return s+'<path class="t-dash" d="M18 28 L250 12 L306 96 L282 188 L34 182 Z"/>'+star(bx*20+10,by*20+10,11)}
+  };
+  function thumbSvg(k){return '<svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+TH[k]()+'</svg>'}
+
+  /* ---------- portfolio ---------- */
+  var CATS=[{id:'all',fa:'همه',en:'All'},{id:'gis',fa:'GIS و نقشه',en:'GIS and maps'},{id:'survey',fa:'نقشه‌برداری',en:'Surveying'},{id:'build',fa:'اجرا و مرمت',en:'Construction'}];
+  var WORKS=[
+    {cat:'gis',th:'landuse',year:{fa:'۱۳۹۷',en:'2018'},place:{fa:'سیریز، زرند',en:'Siriz, Zarand'},title:{fa:'نقشه حریم و کاربری اراضی سیریز',en:'Boundary and land-use map of Siriz'},desc:{fa:'تهیه نقشه حریم و کاربری اراضی در محیط GIS.',en:'Boundary (harim) and land-use mapping in GIS.'},tags:['GIS']},
+    {cat:'gis',th:'cross',year:{fa:'۱۴۰۱',en:'2022–23'},place:{fa:'جاده زرند – سیریز',en:'Zarand–Siriz road'},title:{fa:'نقشه تقاطع آبراهه‌ها با جاده',en:'Stream–road crossings map'},desc:{fa:'ثبت محل عبور آبراهه‌ها از جاده زرند – سیریز در GIS. تحویل‌شده به اداره راهداری زرند.',en:'A GIS map of where streams cross the Zarand–Siriz road, delivered to the Zarand road maintenance office.'},tags:['GIS']},
+    {cat:'survey',th:'asbuilt',year:{fa:'۱۳۹۷',en:'2018'},place:{fa:'چاهکین و گرگک، زرند',en:'Chahkin and Gorgak, Zarand'},title:{fa:'برداشت GPS و نقشه ازبیلت خط انتقال آب',en:'GPS survey and as-built maps of a water line'},desc:{fa:'برداشت میدانی با GPS و تهیه نقشه‌های ازبیلت، به‌عنوان دستیار نقشه‌بردار.',en:'Field GPS survey and as-built maps, as a surveying assistant.'},tags:['GPS','As-built']},
+    {cat:'build',th:'pipe',year:{fa:'۱۳۹۷',en:'2018'},place:{fa:'دشتخاک، زرند',en:'Dashtkhak, Zarand'},title:{fa:'اجرای خط انتقال آب دشتخاک',en:'Dashtkhak water transmission line'},desc:{fa:'اجرای خط انتقال آب در روستای دشتخاک.',en:'Building the water transmission line for Dashtkhak village.'},tags:[{fa:'اجرا',en:'Construction'}]},
+    {cat:'survey',th:'parcel',year:{fa:'۱۳۹۷',en:'2018'},place:{fa:'برای مشتریان',en:'For private clients'},title:{fa:'کروکی زمین با GPS',en:'GPS land sketches'},desc:{fa:'برداشت مرز زمین با GPS و تهیه کروکی در نرم‌افزار BaseCamp.',en:'Recording land boundaries with GPS and drawing sketches in BaseCamp.'},tags:['GPS','BaseCamp']},
+    {cat:'build',th:'arch',year:{fa:'از ۱۳۹۶',en:'Since 2017'},place:{fa:'نزدیک سیریز',en:'Near Siriz'},title:{fa:'مرمت بنای بیش از ۱۰۰ ساله',en:'Restoring a 100-year-old building'},desc:{fa:'اجرای مرمت در محل برای یک اقامتگاه بوم‌گردی. طراحی کار را دیگران انجام داده‌اند.',en:'On-site restoration for an eco-lodge. The design was done by others.'},tags:[{fa:'مرمت',en:'Restoration'}]}
+  ];
+  var schem=bi({fa:'تصویر نمادین',en:'Schematic'});
+  var wh='';
+  WORKS.forEach(function(w){
+    var tags=w.tags.map(function(t){return '<span>'+(typeof t==='string'?t:bi(t))+'</span>'}).join('');
+    var link='';
+    if(w.feat){var u=(S.paperUrl||'').trim();
+      link=u?'<a class="plink" target="_blank" rel="noopener" href="'+esc(u)+'"><svg class="i"><use href="#i-doc"/></svg>'+bi({fa:'خواندن مقاله',en:'Read the paper'})+'</a>'
+            :'<span class="plink off">'+bi({fa:'لینک مقاله به‌زودی',en:'Paper link coming soon'})+'</span>'}
+    wh+='<article class="work'+(w.feat?' feat':'')+'" data-cat="'+w.cat+'"><div class="thumb">'+thumbSvg(w.th)+'<span class="schem">'+schem+'</span></div>'+
+        '<div class="w-body"><div class="w-meta"><span class="w-year">'+bi(w.year)+'</span><span>'+bi(w.place)+'</span></div>'+
+        '<h3>'+bi(w.title)+'</h3><p>'+bi(w.desc)+'</p>'+link+'<div class="tags">'+tags+'</div></div></article>';
+  });
+  document.getElementById('works').innerHTML=wh;
+  var fh='';CATS.forEach(function(c,i){fh+='<button type="button" class="chipbtn" data-f="'+c.id+'" aria-pressed="'+(i===0)+'">'+bi(c)+'</button>'});
+  var fEl=document.getElementById('filters');fEl.innerHTML=fh;
+  fEl.addEventListener('click',function(e){var b=e.target.closest('.chipbtn');if(!b)return;var f=b.dataset.f;
+    fEl.querySelectorAll('.chipbtn').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+    document.querySelectorAll('#works .work').forEach(function(w){w.hidden=!(f==='all'||w.dataset.cat.split(' ').indexOf(f)>-1)})});
+
+  /* ---------- NDVI figure (10 m pixels clipped to an orchard parcel) ---------- */
+  (function(){var s='<defs><clipPath id="parcelClip"><path d="M34 58 L300 30 L338 196 L62 218 Z"/></clipPath></defs><g clip-path="url(#parcelClip)">';
+    for(var y=24;y<228;y+=12)for(var x=24;x<350;x+=12){var cx=x+6,cy=y+6;
+      var v=.7-.52*Math.exp(-((cx-248)*(cx-248)+(cy-142)*(cy-142))/(2*42*42))-.28*Math.exp(-((cx-96)*(cx-96)+(cy-188)*(cy-188))/(2*26*26))+.05*Math.sin(cx*.21)*Math.cos(cy*.17);
+      var c=v<.2?'n-0':v<.4?'n-1':v<.6?'n-2':'n-3';s+='<rect class="n-px '+c+'" x="'+x+'" y="'+y+'" width="12" height="12"/>'}
+    s+='</g><path class="n-edge" d="M34 58 L300 30 L338 196 L62 218 Z"/><circle class="n-weak" cx="248" cy="142" r="50"/>';
+    s+='<path class="n-weak" d="M278 182 L300 214"/><text class="n-txt fa" x="306" y="230">ناحیه ضعیف</text><text class="n-txt en" x="306" y="230">Weak zone</text>';
+    s+='<path class="t-tri" d="M334 6 L340 22 L334 18 L328 22 Z"/><text class="n-mono" x="334" y="32">N</text>';
+    s+='<rect class="n-bar" x="34" y="226" width="30" height="5"/><rect class="n-bar2" x="64" y="226" width="30" height="5"/><text class="n-mono" x="34" y="222">0</text><text class="n-mono" x="94" y="222">50 m</text>';
+    s+='<text class="n-mono" x="200" y="18">Sentinel-2 · 10 m</text>';
+    document.getElementById('ndviSvg').innerHTML=s})();
+
+  /* ---------- live topographic hero ---------- */
+  (function(){
+    var hero=document.getElementById('hero'),cv=document.getElementById('terrain'),mk=document.getElementById('marker');
+    var ctx=cv.getContext&&cv.getContext('2d');if(!ctx)return;
+    var perm=new Uint8Array(512),base=[],sd=1405;for(var i=0;i<256;i++)base[i]=i;
+    for(i=255;i>0;i--){sd=(sd*1664525+1013904223)>>>0;var j=sd%(i+1),tmp=base[i];base[i]=base[j];base[j]=tmp}
+    for(i=0;i<512;i++)perm[i]=base[i&255];
+    function grad(h,x,y){switch(h&7){case 0:return x+y;case 1:return -x+y;case 2:return x-y;case 3:return -x-y;case 4:return x;case 5:return -x;case 6:return y;default:return -y}}
+    function fade(t){return t*t*t*(t*(t*6-15)+10)}
+    function noise(x,y){var X=Math.floor(x),Y=Math.floor(y);x-=X;y-=Y;X&=255;Y&=255;var u=fade(x),v=fade(y),a=perm[X]+Y,b=perm[X+1]+Y;
+      var n00=grad(perm[a],x,y),n10=grad(perm[b],x-1,y),n01=grad(perm[a+1],x,y-1),n11=grad(perm[b+1],x-1,y-1);
+      var l0=n00+(n10-n00)*u,l1=n01+(n11-n01)*u;return l0+(l1-l0)*v}
+    function fbm(x,y){return noise(x,y)*.62+noise(x*2.03+5.2,y*2.03+1.3)*.27+noise(x*4.1+9.7,y*4.1+3.1)*.11}
+    var W=0,H=0,dpr=1,step=10,cols=0,rows=0,vals=null,px=0,py=0,sig=80,col={line:'#93c572',index:'#d88a52'},t=0;
+    var SEG=[null,[3,2],[2,1],[3,1],[0,1],[0,1,3,2],[0,2],[0,3],[0,3],[0,2],[0,3,2,1],[0,1],[3,1],[2,1],[3,2],null],qx=0,qy=0;
+    function ep(e,x,y,a,b,c,d,L){if(e===0){qx=x+step*(L-a)/(b-a);qy=y}else if(e===1){qx=x+step;qy=y+step*(L-b)/(c-b)}else if(e===2){qx=x+step*(L-d)/(c-d);qy=y+step}else{qx=x;qy=y+step*(L-a)/(d-a)}}
+    function colors(){var cs=getComputedStyle(hero);col.line=cs.getPropertyValue('--hero-line').trim()||col.line;col.index=cs.getPropertyValue('--hero-index').trim()||col.index}
+    function size(){var r=hero.getBoundingClientRect();if(!r.width)return;W=r.width;H=r.height;dpr=Math.min(window.devicePixelRatio||1,2);
+      cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);step=W<640?12:10;cols=Math.ceil(W/step);rows=Math.ceil(H/step);vals=new Float32Array((cols+1)*(rows+1));
+      var m=mk.getBoundingClientRect();px=m.left-r.left+m.width/2;py=m.top-r.top+m.height/2;sig=Math.max(m.width*.62,70)}
+    function draw(){if(!vals)return;var k=0,sc=1/250,C=cols+1;
+      for(var jj=0;jj<=rows;jj++){var y=jj*step;for(var ii=0;ii<=cols;ii++){var x=ii*step,dx=x-px,dy=y-py;
+        vals[k++]=fbm(x*sc+t*.018,y*sc-t*.011)+1.75*Math.exp(-(dx*dx+dy*dy)/(2*sig*sig))}}
+      ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);ctx.lineCap='round';ctx.lineJoin='round';
+      for(var n=0,L=-1.05;L<=2.1;L+=.13,n++){var idx=(n%5===4);ctx.beginPath();
+        for(jj=0;jj<rows;jj++){for(ii=0;ii<cols;ii++){
+          var a=vals[jj*C+ii],b=vals[jj*C+ii+1],c=vals[(jj+1)*C+ii+1],d=vals[(jj+1)*C+ii];
+          var s=(a>L?8:0)|(b>L?4:0)|(c>L?2:0)|(d>L?1:0);if(s===0||s===15)continue;
+          var sg=SEG[s],x0=ii*step,y0=jj*step;
+          for(var q=0;q<sg.length;q+=2){ep(sg[q],x0,y0,a,b,c,d,L);ctx.moveTo(qx,qy);ep(sg[q+1],x0,y0,a,b,c,d,L);ctx.lineTo(qx,qy)}}}
+        ctx.strokeStyle=idx?col.index:col.line;ctx.globalAlpha=idx?.7:.3;ctx.lineWidth=idx?1.5:1;ctx.stroke()}
+      ctx.globalAlpha=1}
+    var reduce=window.matchMedia?window.matchMedia('(prefers-reduced-motion: reduce)'):{matches:false},vis=true,running=false,last=0;
+    function loop(ts){if(!running)return;if(ts-last>50){last=ts;t+=.06;draw()}requestAnimationFrame(loop)}
+    function update(){var go=vis&&!document.hidden&&!reduce.matches;if(go&&!running){running=true;requestAnimationFrame(loop)}else if(!go)running=false}
+    relayout=function(){size();draw()};
+    colors();size();draw();update();
+    if(window.ResizeObserver)new ResizeObserver(function(){size();draw()}).observe(hero);else window.addEventListener('resize',function(){size();draw()});
+    if(window.IntersectionObserver)new IntersectionObserver(function(es){vis=es[0].isIntersecting;update()}).observe(hero);
+    document.addEventListener('visibilitychange',update);
+    if(reduce.addEventListener)reduce.addEventListener('change',function(){update();draw()});
+    var mq=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)');if(mq&&mq.addEventListener)mq.addEventListener('change',function(){colors();draw()});
+    if(window.MutationObserver)new MutationObserver(function(){colors();draw()}).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){size();draw()});
+  })();
+})();
+</script>
+</body>
+</html>
